@@ -1,0 +1,24 @@
+sqlite> .open
+sqlite> create table emp2
+   ...> (eid primary key,ename,dept,basci,branch);
+sqlite> insert into emp2 values(1,'katha','account',20000,'surat'),
+   ...> (2,'akshu','hr',40000,'navsari'),
+   ...> (3,'tiya','inventory',56000,'bardoli'),
+   ...> (4,'siya','it',30000,'surat'),
+   ...> (5,'kiya','account',20000,'bardoli');
+sqlite> .mode table
+sqlite> select * from emp2;
++-----+-------+-----------+-------+---------+
+| eid | ename |   dept    | basci | branch  |
++-----+-------+-----------+-------+---------+
+| 1   | katha | account   | 20000 | surat   |
+| 2   | akshu | hr        | 40000 | navsari |
+| 3   | tiya  | inventory | 56000 | bardoli |
+| 4   | siya  | it        | 30000 | surat   |
+| 5   | kiya  | account   | 20000 | bardoli |
++-----+-------+-----------+-------+---------+
+sqlite> .mode column
+sqlite> .mode csv
+sqlite> .output D:/23BCA298/sqlite3/csv/emp2.csv
+sqlite> select * from emp2;
+sqlite>
